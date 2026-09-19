@@ -1,19 +1,24 @@
-import { Button } from "@/components/ui/button"
+import { SmoothScroll } from "@/components/effects/smooth-scroll"
+import { Experience } from "@/components/landing/experience"
+import { FinalCta } from "@/components/landing/final-cta"
+import { Hero } from "@/components/landing/hero"
+import { Navbar } from "@/components/landing/navbar"
+import { Philosophy } from "@/components/landing/philosophy"
+import { Statement } from "@/components/landing/statement"
+import { TypographyTransition } from "@/components/landing/typography-transition"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <SmoothScroll>
+      <Navbar />
+      <main>
+        <Hero />
+        <Statement />
+        <Philosophy />
+        <Experience />
+        <TypographyTransition />
+        <FinalCta />
+      </main>
+    </SmoothScroll>
   )
 }
