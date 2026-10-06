@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 import { AnimatedLines } from "@/components/effects/animated-lines"
@@ -48,7 +49,15 @@ export function FinalCta() {
         </Marquee>
         <div className="flex flex-col gap-2 px-6 py-6 font-mono text-[11px] tracking-[0.2em] text-ink/40 uppercase md:flex-row md:items-center md:justify-between md:px-10">
           <p>© 2026 UniSource</p>
-          <p>Private by design</p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <Link
+              href="/privacy-policy"
+              className="transition-colors hover:text-ink focus-visible:underline focus-visible:underline-offset-4"
+            >
+              Privacy policy
+            </Link>
+            <p>Private by design</p>
+          </div>
         </div>
       </footer>
     </section>
